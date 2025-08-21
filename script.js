@@ -31,6 +31,8 @@ cells.forEach((cell) => {
         swal(`Jogador ${winner} venceu!`);
         cells.forEach((cell) => (cell.textContent = ""));
         status.textContent = "Aguardando jogador X";
+          player1.style.opacity = "1";
+        player2.style.opacity = "0.6";
         currentMove = 1;
         return;
       } else if (currentMove === 9) {
@@ -38,6 +40,8 @@ cells.forEach((cell) => {
         swal("Empate!");
         cells.forEach((cell) => (cell.textContent = ""));
         status.textContent = "Aguardando jogador X";
+          player1.style.opacity = "1";
+        player2.style.opacity = "0.6";
         currentMove = 1;
         return;
       }
@@ -65,10 +69,11 @@ function checkWinner() {
     )
       return board[0][i];
   }
-  // Diagonals
+  // Diagonais
   if (board[0][0] && board[0][0] === board[1][1] && board[1][1] === board[2][2])
     return board[0][0];
   if (board[0][2] && board[0][2] === board[1][1] && board[1][1] === board[2][0])
     return board[0][2];
   return null;
 }
+
