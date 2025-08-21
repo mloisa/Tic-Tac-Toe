@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="side_info">
+        <div class="profiles">
+            <h1>Jogo da velha</h1>
+            <div class="profile" id="player1">
+                <img src="ImagensTTT/profile-icon.png" alt="Perfil">
+                <h2>Jogador X</h2>
+            </div>
+            <div class="profile" id="player2">
+                <img src="ImagensTTT/profile-icon.png" alt="Perfil">
+                <h2>Jogador O</h2>
+            </div>
+        </div>
+        <button id="restart">Começar novamente</button>
+    </div>
+    <div class="container_tictactoe">
+      <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <h2 id="status">Aguardando jogador X</h2>
+    </div>
+  </body>
+  <audio id="click" src="Sounds/click_effect-86995.mp3"></audio>
+  <audio id="sparkle" src="Sounds/sparkle.mp3"></audio>
+  <audio id="lose" src="Sounds/fail-234710.mp3"></audio>
+</html>
+<script src="script.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
